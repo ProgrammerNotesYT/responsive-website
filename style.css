@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: 'Arimo', sans-serif;
+    background-color: #f9f9f9;
+    border-top: 4px solid #7C82D3;
+}
+
+.nav {
+    font-size: 24px;
+    font-weight: bold;
+    user-select: none;
+    z-index: 3;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 90%;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.nav-link {
+    position: relative;
+    color: #757474;
+    display: inline-block;
+    margin: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #7C82D3;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-link:hover {
+    color: #282828;
+}
+
+.logo {
+    color: #282828;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.logo:after {
+    transform: scaleX(0) !important;
+}
+
+.purple {
+    color: #7C82D3;
+}
+
+.active {
+    border-bottom: 2px solid #7C82D3;
+    color: black;
+}
+
+.svg-top, .svg-bottom {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+
+.svg-top {
+    top: 50%;
+    margin-top: -21%;
+}
+
+.svg-bottom {
+    top: 50%;
+    transform: rotate(180deg);
+}
+
+.main {
+    height: 80vh;
+    display: flex;
+    clear: both;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.column {
+    width: 50%;
+}
+
+.name {
+    border-bottom: 2px dotted #7C82D3;
+    font-size: 70px;
+}
+
+h1, p {
+    color: #757474;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+p {
+    font-size: 22px;
+}
+
+.woman-image {
+    width: 100%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    margin-top: -7%;
+}
+
+.circle {
+    width: 80%;
+    height: 0;
+    padding-bottom: 80%;
+    margin: 0 auto;
+    border-radius: 100%;
+    background: linear-gradient(to right, #94A3EB, #655BB9);
+    box-shadow: -40px 52px 43px -43px rgba(148, 148, 148, 1);
+    transition: transform .4s ease-in-out;
+}
+
+.circle:hover {
+    transform: rotate(-4deg);
+}
+
+.social-links {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    margin-top: -110px;
+    right: 30px;
+    list-style-type: none;
+    font-size: 33px;
+    cursor: pointer;
+}
+
+.social-links li {
+    margin: 20px 0;
+}
+
+.rotate-animation {
+    transition: transform .4s ease-in-out;
+}
+
+.rotate-animation:hover {
+    transform: rotate(360deg);
+}
+
+.fa-facebook-square {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color: #BC2A8D;
+}
+
+.fa-twitter {
+    color: #00ACEE;
+}
+
+.font-large {
+    font-size: 130px;
+}
+
+.triangle {
+    color: #94A3EB;
+    left: 50%;
+    position: absolute;
+    margin-left: -40px;
+    bottom: 30px;
+    animation: MoveUpDown 1.5s ease-in-out infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        bottom: 30px;
+    }
+
+    50% {
+        bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 1160px){
+    h1 {
+        font-size: 40px;
+    }
+
+    .name {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 880px){
+    .main {
+        width: 100%;
+        display: block;
+    }
+
+    .column {
+        text-align: center;
+        width: 85%;
+        margin: 50px auto;
+    }
+
+    .social-links {
+        right: 10px;
+    }
+
+    .triangle {
+        visibility: hidden;
+    }
+
+    .nav .float-right, .nav .float-left {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 525px){
+    .float-right, .nav-link {
+        font-size: 18px;
+        margin: 14px 4px;
+    }
+    .social-links {
+        display: block;
+        text-align: center;
+        position: relative;
+        margin-top: 0;
+    }
+
+    .social-links li {
+        display: inline-block;
+        font-size: 25px;
+        margin: 50px 20px 0 20px;
+    }
+
+    .social-links li i {
+        color: #757474;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    h1 {
+        font-size: 30px;
+    }
+    .name {
+        font-size: 40px;
+    }
+    .float-right .nav-link {
+        font-size: 14px;
+        margin: 14px 3px;
+    }
+}
